@@ -1,0 +1,56 @@
+<div class="signupform">
+	<h1>Create New Account</h1>
+	<input type="text" class="signupusername" placeholder="Username">
+	<label for="username">Username</label><br>
+	<input type="password" class="signuppassword" placeholder="Password">
+	<label for="password">Password</label><br>
+	<input type="text" class="signupemail" placeholder="Email">
+	<label for="email">Email</label><br>
+	<input type="text" class="signupconfemail" placeholder="Confirm email">
+	<label for="confemail">Confirm Email</label><br><br>
+	<div class="dob">
+			<select class="signupdobmonth">
+				<option value="month" disabled selected>Month</option>
+				<option value="january">January</option>
+				<option value="february">February</option>
+				<option value="march">March</option>
+				<option value="april">April</option>
+				<option value="may">May</option>
+				<option value="june">June</option>
+				<option value="july">July</option>
+				<option value="august">August</option>
+				<option value="september">September</option>
+				<option value="october">October</option>
+				<option value="november">November</option>
+				<option value="december">December</option>
+			</select>
+		<input type="text" class="signupdobday"  maxlength="2" placeholder="Day" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+		<input type="text" class="signupdobyear" maxlength="4" placeholder="Year" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+	</div>
+	<label for="signupdob">DOB</label><br>
+	<div  class="signupgender">
+		<input type="radio" name="gender" value="male" class="gendermale"> Male
+		<input type="radio" name="gender" value="female" class="genderfemale"> Female
+	</div>
+	<label for="gender">Gender</label><br>
+	<div class="allowmarketing">
+		<input type="checkbox" name="allowmarketing" value="allowmarketing" class="marketingallowed"> Share my registration data with beatbro's content providers for marketing purposes.
+	</div>
+	<div class="agreement">
+	By clicking on Sign Up, you agree to beatbro's terms & conditions and privacy policy
+	</div>
+	<div class="signupformbutton">
+	<button type="button" class="sendsignup">Sign Up</button>
+	</div>
+	Already have an account? Log in
+</div>
+<div class="activateinstructions">
+	<div class="instructions">
+		Check your email used to signup for a confirmation link from beatbro. Follow the instructions to activate your account.
+	</div>
+</div>
+
+<div class="createusererror">
+
+</div>
+{{signup-form}}

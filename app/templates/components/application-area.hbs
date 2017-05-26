@@ -1,0 +1,41 @@
+{{audio-controls}}
+{{modal-player}}
+{{slim-scroller}}
+<div class="topnav">
+	<div class="logo">{{#link-to "popular-albums"}}<img class="logoimg" src="/images/site/logo.png" />{{/link-to}}</div>
+	<div class="searchbox">
+		<div class="searchboxarea">
+			<input type="text" class="topsearch" placeholder="Search..."><div class="searchclear clearablehidden"></div>
+		</div>
+	</div>
+	{{live-search gotoalbum="gotoalbum"}}
+		<div class="navlinks">
+		{{#if (if not is-authenticated)}}
+			<p>Yep</p>
+			<div class="loginbutton" {{action "login"}}>Authed</div><div class="signupbutton" {{action "signup"}}>Authed</div><div class="playlistbutton"><img src="/images/site/playlistbutton.png" /></div>
+		{{else}}
+			<div class="loginbutton" {{action "login"}}>Login</div><div class="signupbutton" {{action "signup"}}>Sign Up</div><div class="playlistbutton"><img src="/images/site/playlistbutton.png" /></div>
+		{{/if}}
+		</div>
+</div>
+<div class="leftbar">
+		<div class="leftlinks">
+			<div class="popularalbums" {{action "popularalbums"}}><div class="leftlink">Popular Albums</div></div>
+			<div class="newreleases" {{action "newreleases"}}><div class="leftlink">New Releases</div></div>
+			<div class="top50" {{action "top50"}}><div class="leftlink">Top 50</div></div>
+			<div class="populargenres" {{action "populargenres"}}><div class="leftlink">Popular Genres</div></div><br>
+		</div>
+</div>
+<div class="centercontent">
+	<div class="pageloader pageloaderhidden">
+		<div class="pageanimcenter">
+			<div class="pageloaderanim"></div>
+		</div>
+	</div>
+	<div class="slim-scroller">
+		{{outlet}}
+	</div>
+</div>
+<div class="rightbar rightbarhidden">
+	{{playlist-controls}}
+</div>
