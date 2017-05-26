@@ -1,8 +1,8 @@
 {
   "name": "beatbro",
-  "version": "0.0.0",
-  "description": "Small description for beatbro goes here",
-  "license": "MIT",
+  "version": "1.0.0",
+  "description": "A web-based youtube api music/video player frontend.",
+  "license": "GNU Affero General Public License v3.0",
   "author": "",
   "directories": {
     "doc": "doc",
